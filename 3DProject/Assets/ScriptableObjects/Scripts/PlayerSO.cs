@@ -6,10 +6,11 @@ using UnityEngine;
 public class PlayerSO : ScriptableObject
 {
     public int attack;
-    public float attackspeed;
+    public float attackSpeed;
     public float speed;
+    public float runSpeed;
     public float shotgunSpread;
     public int gold;
-    public WeaponType[] ownedWeapon;
+    public List<WeaponType> ownedWeapon;
     public bool isReset;
 }

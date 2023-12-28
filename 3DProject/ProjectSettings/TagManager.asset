@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - EndZone
+  - Monster
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -13,9 +16,9 @@ TagManager:
   - Water
   - UI
   - Bullet
-  - 
-  - 
-  - 
+  - Monster
+  - Weapon
+  - Wall
   - 
   - 
   - 

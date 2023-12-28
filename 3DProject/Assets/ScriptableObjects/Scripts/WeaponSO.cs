@@ -8,6 +8,7 @@ public class WeaponSO : ScriptableObject
 {
     public WeaponType weaponType;
     public float attackspeed;
+    public float shotSpeed;
     public int attack;
     public int price;
 
