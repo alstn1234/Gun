@@ -28,8 +28,10 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector]
     public bool isCursorLock = true;
+
     private bool isAttack = false;
     private float attackTime;
+    private float[] recoilPower = { 1, 1, 5 };
     private Animator _animator;
 
     private Rigidbody _rigidbody;
@@ -67,11 +69,21 @@ public class PlayerController : MonoBehaviour
                 }
                 _animator.SetTrigger("Attack");
                 _animator.speed = 1 / GameManager.instance.GetAttackSpeed();
-                // ¹Ýµ¿
-                gameObject.transform.Translate(Vector3.up * 0.1f);
+                HandleRecoil();
                 attackTime = 0f;
             }
         }
+    }
+
+    private void HandleRecoil()
+    {
+        transform.Translate(Vector3.up * 0.1f);
+
+        camXRot += recoilPower[(int)GameManager.instance.CurrentWeapon.weaponType] * lookSensitivity;
+        camXRot = Mathf.Clamp(camXRot, camMinX, camMaxX);
+        RotatePivot.localEulerAngles = new Vector3(-camXRot, 0f, 0f);
+
+        //transform.eulerAngles += new Vector3(-recoilPower[(int)GameManager.instance.CurrentWeapon.weaponType], 0f, 0f);
     }
 
     private void LateUpdate()
@@ -87,6 +99,7 @@ public class PlayerController : MonoBehaviour
 
         _rigidbody.velocity = dir;
     }
+
 
 
     private void Look()

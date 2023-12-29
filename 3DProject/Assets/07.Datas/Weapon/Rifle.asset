@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rifle
   m_EditorClassIdentifier: 
   weaponType: 1
-  attackspeed: 0.1
-  shotSpeed: 70000
-  attack: 5
+  attackspeed: 0.15
+  shotSpeed: 50000
+  attack: 6
   price: 500

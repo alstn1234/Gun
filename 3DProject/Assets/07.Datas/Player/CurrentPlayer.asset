@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd227c5d60f5224d952c54726886601, type: 3}
   m_Name: CurrentPlayer
   m_EditorClassIdentifier: 
-  attack: 1
+  attack: 2
   attackSpeed: 10
   speed: 20
   runSpeed: 30
-  shotgunSpread: 1
-  gold: 19574
+  shotgunSpread: 2
+  gold: 4072
   ownedWeapon: 000000000100000002000000
   isReset: 0

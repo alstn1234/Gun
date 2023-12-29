@@ -53,10 +53,10 @@ public class SpawnManager : MonoBehaviour
 
     private void UpdateGameSettings()
     {
-        currentHealth = Mathf.Clamp(baseMonsterSO.health + ((int)currentTime / 5), 10, 100);
+        currentHealth = Mathf.Clamp(baseMonsterSO.health + ((int)currentTime / 10), 10, 100);
         currentspeed = Mathf.Clamp(baseMonsterSO.speed + (currentTime / 20), 10f, 50f);
         currentgold = Mathf.Clamp(baseMonsterSO.gold + ((int)currentTime / 5), 10, 30);
-        spawnIntervalTime = Mathf.Clamp(defaultSpawnIntervalTime - (currentTime / 10) * 0.2f, 0.2f, 3f);
+        spawnIntervalTime = Mathf.Clamp(defaultSpawnIntervalTime - (currentTime / 20) * 0.2f, 0.2f, 3f);
     }
 
 

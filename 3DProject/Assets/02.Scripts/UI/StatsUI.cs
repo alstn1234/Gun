@@ -42,8 +42,6 @@ public class StatsUI : MonoBehaviour
     private int speedUpgradeCount;
     private int spreadUpgradeCount;
 
-    private int UpgradePrice;
-
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -96,22 +94,24 @@ public class StatsUI : MonoBehaviour
         playerSO.shotgunSpread = 0;
     }
 
-    public bool GoldCheck(int upgradeCount)
+    public bool GoldCheck(int price)
     {
-        UpgradePrice = 100 + upgradeCount;
-        if (GameManager.instance.playerCurrentStats.gold < UpgradePrice) return false;
-        GameManager.instance.playerCurrentStats.gold -= UpgradePrice;
+        if (GameManager.instance.playerCurrentStats.gold < price) return false;
+        GameManager.instance.playerCurrentStats.gold -= price;
         return true;
     }
 
     public void BuyWeaponButton()
     {
         weaponBuyWindow.SetActive(false);
-        if (GameManager.instance.playerCurrentStats.gold < GameManager.instance.weaponList[(int)clickWeapon].price)
+        if (!GoldCheck(GameManager.instance.weaponList[(int)clickWeapon].price))
         {
             buyFailWindow.gameObject.SetActive(true);
             return;
         }
+
+        UpdateText();
+
         GameManager.instance.playerCurrentStats.ownedWeapon.Add(clickWeapon);
         GameManager.instance.ChangeWeapon(clickWeapon);
         AudioManager.instance.PlaySFX("Swap");
@@ -125,7 +125,9 @@ public class StatsUI : MonoBehaviour
     #region Upgrade
     public void AttackUpgrade()
     {
-        if (!GoldCheck(attackUpgradeCount)) return;
+        if (!GoldCheck(attackUpgradeCount + 100)) return;
+
+
 
         InitSO();
         playerSO.attack = 1;
@@ -139,7 +141,7 @@ public class StatsUI : MonoBehaviour
 
     public void AttackSpeedUpgrade()
     {
-        if (!GoldCheck(attackSpeedUpgradeCount)) return;
+        if (!GoldCheck(attackSpeedUpgradeCount + 100)) return;
 
         InitSO();
         playerSO.attackSpeed = 1;
@@ -153,7 +155,7 @@ public class StatsUI : MonoBehaviour
 
     public void SpeedUpgrade()
     {
-        if (!GoldCheck(speedUpgradeCount)) return;
+        if (!GoldCheck(speedUpgradeCount + 100)) return;
 
         InitSO();
         playerSO.speed = 1;
@@ -167,7 +169,7 @@ public class StatsUI : MonoBehaviour
 
     public void SpreadUpgrade()
     {
-        if (!GoldCheck(spreadUpgradeCount)) return;
+        if (!GoldCheck(spreadUpgradeCount + 100)) return;
 
         InitSO();
         playerSO.shotgunSpread = 1;
