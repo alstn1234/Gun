@@ -11,35 +11,52 @@
     - 권총, 라이플, 샷건 3종류의 총으로 구성되어있습니다.
     - 마우스 왼쪽 버튼으로 공격, 마우스 오른쪽 버튼으로 줌을 할 수 있습니다.
     - 공격 시 반동으로 에임이 상단으로 조금씩 이동합니다.
-    ![총 종류](https://github.com/alstn1234/Gun/assets/102529677/b52f4395-42ec-4798-8538-d96caa877f88)
+<p align="center">
+    <img src="https://github.com/alstn1234/Gun/assets/102529677/b52f4395-42ec-4798-8538-d96caa877f88" width="49%"/>
+    <img src="https://github.com/alstn1234/Gun/assets/102529677/2ef7fbac-44af-46b2-9085-f87c208459dc" width="49%"/>
+</p>
 
         
 #### 2. 캐릭터 조작
     - 키보드 W/A/S/D 입력하여 캐릭터를 이동합니다.
     - Left Shift를 입력하면 캐릭터가 더 빠르게 이동합니다.
     - 캐릭터가 바라보는 방향이 마우스의 움직임을 따라갑니다.
-    ![캐릭터 조작](https://github.com/alstn1234/Gun/assets/102529677/0fd78bea-fa5a-467b-a07d-699893fcab6a)
+<p align="center">
+    <img src="https://github.com/alstn1234/Gun/assets/102529677/0fd78bea-fa5a-467b-a07d-699893fcab6a" width="50%"/>
+</p>
 
     
 #### 3. 몬스터 소환
     - 일정 주기 마다 몬스터가 소환됩니다.
     - 시간이 지날수록 몬스터 체력, 소환 주기, 획득 골드가 변경됩니다.
+    - 몬스터를 공격하면 데미지가 몬스터 상단에 출력됩니다.
     - 몬스터를 처치하면 골드를 획득합니다.
-    
+<p align="center">
+    <img src="https://github.com/alstn1234/Gun/assets/102529677/c18b46a0-863c-4c00-ba4f-56ea7899e575" width="50%"/>
+</p>
+
     
 #### 4. 무기 구매 및 교체, 스탯 강화
     - 키보드 E 입력하여 무기 구매 및 교체, 스탯 강화 창을 열 수 있습니다.
     - 골드로 무기 구매, 스탯 강화를 할 수 있습니다.
+<p align="center">
+    <img src="https://github.com/alstn1234/Gun/assets/102529677/67f9b0a7-5909-410b-8185-c88cead02673" width="50%"/>
+</p>
     
 
 #### 5. 애니메이션
     - 공격 시 공격속도에 맞춰 무기 애니메이션 실행됩니다.
     - 몬스터는 움직임, 사망 애니메이션이 상황에 맞게 실행됩니다.
-    
+<p align="center">
+    <img src="https://github.com/alstn1234/Gun/assets/102529677/c18b46a0-863c-4c00-ba4f-56ea7899e575" width="50%"/>
+</p>
     
 #### 6. 게임 오버
     - 몬스터가 반대 벽에 도달하면 게임이 종료되고 게임 오버 창을 띄웁니다.
     - 메인으로 버튼을 누르면 첫 화면으로 이동합니다. 
+<p align="center">
+    <img src="https://github.com/alstn1234/Gun/assets/102529677/65c51739-0711-4992-848d-bac05b219990" width="50%"/>
+</p>
         
         
 #### 7. 사운드 효과
